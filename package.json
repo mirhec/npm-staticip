@@ -1,6 +1,6 @@
 {
   "name": "staticip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "staticip.js",
   "dependencies": {
@@ -15,6 +15,6 @@
   "author": "",
   "license": "ISC",
   "bin": {
-      "staticip": "./staticip.js"
+    "staticip": "./staticip.js"
   }
 }
