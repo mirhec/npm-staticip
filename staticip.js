@@ -8,8 +8,8 @@ cli.parse(null, {
     generate: 'Generate an initial ipmapping.json file with the current ip configuration.'
 });
 
-if(cli.command == 'setip') {
-    wait.launchFiber(setip);
-} else if(cli.command == 'generate') {
+if(cli.command == 'generate') {
     wait.launchFiber(generate);
+} else {
+    wait.launchFiber(setip);
 }
