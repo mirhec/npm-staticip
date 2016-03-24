@@ -11,3 +11,5 @@ SET "STATICIP_JS=%~dp0\..\staticip.js"
 IF NOT EXIST "%STATICIP_JS%" (
   SET "STATICIP_JS=..\staticip.js"
 )
+
+"%NODE_EXE%" "%STATICIP_JS%" %*
