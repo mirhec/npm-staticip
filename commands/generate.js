@@ -1,7 +1,6 @@
 var wait = require('wait.for');
 var macaddress = require('macaddress');
 var fs = require('fs');
-//var mapping = require('./ipmapping');
 
 module.exports = function generate() {
     console.log('generate ...');
