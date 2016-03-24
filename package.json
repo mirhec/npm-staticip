@@ -15,6 +15,6 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "staticip": "./bin/staticip.cmd"
+    "staticip": "node ./staticip.js"
   }
 }

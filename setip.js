@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var mapping = {};
 if (fs.existsSync('./ipmapping.json')) {
-    mapping = require('./ipmapping');
+    mapping = JSON.parse(fs.readFileSync('./ipmapping.json'));
 }
 
 module.exports = function force() {

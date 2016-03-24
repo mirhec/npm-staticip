@@ -1,5 +1,5 @@
 # Static Ip
-_Windows Cli Helper to set static ip addresses for network interfaces based on mac address._
+Windows Cli Helper to set static ip addresses for network interfaces based on mac address.
 
 This tool is used to set static ip addresses for NIC on windows based on its mac address.
 Sometimes it occurs (especially if you are using multiple USB3 to GigE adapter) that windows
