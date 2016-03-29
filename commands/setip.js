@@ -32,28 +32,32 @@ module.exports = function(options) {
             cli.error(err);
         }
     } else {
-        try {
-            // Set all ip addresses to dhcp in a first step
-            for (var adr in addresses) {
+        // Set all ip addresses to dhcp in a first step
+        for (var adr in addresses) {
+            try {
                 var mac = addresses[adr].mac;
                 var ip = mapping[mac];
                 if (ip !== undefined && ip !== '') {
                     cli.info('set dhcp for ' + adr + ' (' + mac + ')');
                     var result = wait.for(exec, 'netsh int ipv4 set address name="' + adr + '" dhcp');
                 }
+            } catch(err) {
+                cli.error(err);
             }
+        }
             
-            // Set the static ip addresses
-            for (var adr in addresses) {
+        // Set the static ip addresses
+        for (var adr in addresses) {
+            try {
                 var mac = addresses[adr].mac;
                 var ip = mapping[mac];
                 if (ip !== undefined && ip !== '') {
                     var result = wait.for(exec, 'netsh int ipv4 set address name="' + adr + '" source=static address=' + ip + ' mask=255.255.255.0');
                     cli.ok('set ip for ' + adr + ' (' + mac + ') -> ' + ip);
                 }
+            } catch(err) {
+                cli.error(err);
             }
-        } catch(err) {
-            cli.error(err);
         }
     }
 }
