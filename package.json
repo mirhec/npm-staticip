@@ -15,5 +15,9 @@
   },
   "author": "",
   "license": "ISC",
-  "bin": "./bin/staticip.cmd"
+  "bin": "./bin/staticip.cmd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirhec/npm-staticip.git"
+  }
 }
